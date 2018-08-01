@@ -1,0 +1,28 @@
+{
+    "name": "zhouyisdk/zhouyisdk",
+    "description": "周易sdk",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "HoeWang",
+            "email": "37407409@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php":">=5.6.0"
+    },
+    "autoload":{
+        "psr-4":{
+            "zhouyisdk\\config\\":"src/zhouyisdk/config",
+	        "zhouyisdk\\request\\":"src/zhouyisdk/request"
+        }
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
