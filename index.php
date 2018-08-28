@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> c54df49ea84504b633b04bf9c16b489b02a162d5
 require_once dirname(__FILE__).'/vendor/autoload.php';
 use zhouyisdk\request\FreeTool;
 
