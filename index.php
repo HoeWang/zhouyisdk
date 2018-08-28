@@ -1,6 +1,6 @@
 <?php
-// namespace linxun\zhouyisdk\ext;
-require_once './vendor/autoload.php';
+
+require_once dirname(__FILE__).'/vendor/autoload.php';
 use zhouyisdk\request\FreeTool;
 
 // function callSDK($module, $action, ...$arguments)
@@ -18,7 +18,7 @@ function callSDK($module, $action, ...$arguments)
     // return call_user_func_array([$obj, $action], $arguments);
     return call_user_func_array([$obj, $action], $arguments);
 }
-
+//以下为参数参考模板：
 // $users = [
 //             [   
 //                 // 'id'            => 109,
@@ -71,7 +71,7 @@ function callSDK($module, $action, ...$arguments)
 // $res = callSDK('LingQian','getAppinfo',2);
 
 
-$res = callSDK('FreeTool','getAppinfo',2);
-echo '<pre>';
-var_dump($res);
-echo '</pre>';
+// $res = callSDK('FreeTool','getAppinfo',2);
+// echo '<pre>';
+// var_dump($res);
+// echo '</pre>';

@@ -17,8 +17,25 @@ class BaseSdk
 
 	public function __construct()
 	{
-		$this->setAppID(ZhouyiConfig::APPID);
-        $this->setAppKey(ZhouyiConfig::KEY);
+		$this->setAppID(get_platform());
+        switch(get_platform())
+        {
+            case 'smxs':
+                $key = 'aksjdklfwen232mklmwoie';
+                break;
+            case 'k366':
+                $key = 'aksjdlfkwoei238928jkl';
+                break;
+            case 'zyzb':
+                $key = 'wioejfowfjsf992039kl';
+                break;
+            case 'qyg':
+                $key = 'nmxnvjweiwowe9209adjf';
+                break;
+            default:
+                exit('域名未到授权');
+        }
+        $this->setAppKey($key);
         $this->setTimeout(ZhouyiConfig::TIMEOUT);
 	}
 
