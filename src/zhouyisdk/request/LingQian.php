@@ -14,15 +14,14 @@ class LingQian extends BaseSdk
 	 * @param  string $tool_code  [测试工具的标识]
 	 * @return [array]            [测试的结果信息]
 	 */
-	public function tool($tool_code = '',$lqaction = null,$id = null)
+	public function tool($data = [],$id = null)
 	{
 		$module = 'lingqian';
         $action = 'tool';
 
         $params = [
         	'action'		=>	$action,
-        	'tool_code'		=>	$tool_code,
-        	'lqaction'		=>	$lqaction,
+        	'data'		=>	$data,
         	'id'			=>	$id
         ];
 

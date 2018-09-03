@@ -14,15 +14,16 @@ class FreeTool extends BaseSdk
 	 * @param  string $tool_code  [测试工具的标识]
 	 * @return [array]            [测试的结果信息]
 	 */
-	public function tool($tool_code = '',$users = [])
+	public function tool($data = [],$users = [],$ln = '')
 	{
 		$module = 'freetool';
         $action = 'tool';
 
         $params = [
         	'action'		=>	$action,
-        	'tool_code'		=>	$tool_code,
+        	'data'			=>	$data,
         	'users'			=>	$users,
+        	'ln'			=>	$ln
         ];
 
         $results = $this->request($module, $params);
