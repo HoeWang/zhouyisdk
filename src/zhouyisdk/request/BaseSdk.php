@@ -106,11 +106,11 @@ class BaseSdk
      */
     protected function request($module, $params = [])
     {
-    	$this->setGateway($module);//设置网关
-    	
-    	$data = $params;
-    	$data['key']		=	$this->appkey;
-    	$data['pf_code']	=	$this->appid;
+        $this->setGateway($module);//设置网关
+        
+        $data = $params;
+        $data['key']        =   $this->appkey;
+        $data['pf_code']    =   $this->appid;
 
         // 参数
         ksort($data);

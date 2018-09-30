@@ -21,7 +21,7 @@ class Othertool extends BaseSdk
 
         $params = [
         	'action'		=>	$action,
-        	'param'		=>	$param,
+        	'data'		=>	$param,
         ];
 
         $results = $this->request($module, $params);

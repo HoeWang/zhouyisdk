@@ -29,6 +29,18 @@ class FreeTool extends BaseSdk
         $results = $this->request($module, $params);
         return $results;
 	}
+	public function setcookies($data = [])
+	{
+		$module = 'freetool';
+        $action = 'setcookies';
+        $params = [
+        	'action'		=>	$action,
+        	'data'		=>	$data,
+        ];
+
+        $results = $this->request($module, $params);
+        return $results;
+	}
 
 	/**
 	 * 工具信息获取方法
