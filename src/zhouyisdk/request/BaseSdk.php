@@ -117,9 +117,10 @@ class BaseSdk
         $access_token_key = strtolower(md5(urldecode(http_build_query($data))));
         $data['access_token_key'] = $access_token_key;
         $url  = ZhouyiConfig::URL . $this->gateway;
-
+        
         // 执行请求
         $ch = curl_init();
+        // $url = 'http://zhouyiapi.com';
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HEADER, 0);//todo
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
